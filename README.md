@@ -1,2 +1,2 @@
 # jblog
-For blog demo
+This is for Taichitech blog demo.
