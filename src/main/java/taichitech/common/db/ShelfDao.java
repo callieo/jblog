@@ -28,7 +28,7 @@ public class ShelfDao extends BaseJdbcDao {
 					});
 			return shelf;
 		} catch (DataAccessException e) {
-			logger.error("查詢錯誤", e);
+			logger.error("find shelf fail", e);
 			return null;
 		}
 

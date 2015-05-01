@@ -1,38 +1,56 @@
 package taichitech.common.db;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Book {
-	@Override
-	public String toString() {
-		return "Book [name=" + name + "]";
-	}
+    @Override
+    public String toString() {
+        return "Book [name=" + name + "]";
+    }
 
-	private String author;
+    @Id
+    private String isbn;
 
-	public String getAuthor() {
-		return author;
-	}
+    public String getIsbn() {
+        return isbn;
+    }
 
-	public void setAuthor(String author) {
-		this.author = author;
-	}
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
-	private String name;
+    @Column
+    private String author;
 
-	public Book() {
+    public String getAuthor() {
+        return author;
+    }
 
-	}
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
-	public Book(String name) {
-		super();
-		this.name = name;
-	}
+    @Column
+    private String name;
 
-	public String getName() {
-		return name;
-	}
+    public Book() {
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    }
+
+    public Book(String name) {
+        super();
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }
